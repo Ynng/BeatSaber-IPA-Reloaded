@@ -16,13 +16,7 @@ namespace IPA.Injector
         {
             var dataPlugins = Path.Combine(GameVersionEarly.ResolveDataPath(path), "Plugins");
 
-            return 
-                File.Exists(Path.Combine(path, "IGG-GAMES.COM.url")) ||
-                File.Exists(Path.Combine(path, "SmartSteamEmu.ini")) ||
-                File.Exists(Path.Combine(path, "GAMESTORRENT.CO.url")) ||
-                File.Exists(Path.Combine(dataPlugins, "BSteam crack.dll")) ||
-                File.Exists(Path.Combine(dataPlugins, "HUHUVR_steam_api64.dll")) ||
-                Directory.GetFiles(dataPlugins, "*.ini", SearchOption.TopDirectoryOnly).Length > 0;
+            return false;
         }
     }
 }
