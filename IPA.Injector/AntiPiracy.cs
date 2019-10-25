@@ -34,13 +34,7 @@ namespace IPA.Injector
 
             // To the guys that maintain a fork that removes this code: I would greatly appreciate if we could talk
             //   about this for a little bit. Please message me on Discord at DaNike#6223
-            return 
-                File.Exists(Path.Combine(path, "IGG-GAMES.COM.url")) ||
-                File.Exists(Path.Combine(path, "SmartSteamEmu.ini")) ||
-                File.Exists(Path.Combine(path, "GAMESTORRENT.CO.url")) ||
-                File.Exists(Path.Combine(dataPlugins, "BSteam crack.dll")) ||
-                File.Exists(Path.Combine(dataPlugins, "HUHUVR_steam_api64.dll")) ||
-                Directory.GetFiles(dataPlugins, "*.ini", SearchOption.TopDirectoryOnly).Length > 0;
+            return false;
         }
 
         private static string GetPath(Guid guid, KnownFolderFlags flags)
